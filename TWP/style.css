@@ -98,7 +98,6 @@ img {
     border: 1px solid black;
 }
 
-/* conveyor belt */
 
 .image-gallery {
     display: flex;
@@ -113,7 +112,6 @@ img {
     object-fit: cover;
     flex-shrink: 0;
 }
-
 
 
 @keyframes scroll {
