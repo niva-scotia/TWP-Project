@@ -91,44 +91,44 @@ img {
 }
 
 .gallery-container {
-    /* Define the 3D space for the gallery */
-    perspective: 1000px;
+    width: 800px;
+    height: 400px; 
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid black;
 }
 
 .image-gallery {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    /* Apply the rotating animation */
-    animation: rotate 20s linear infinite;
-    /* Maintain 3D transformation for children */
-    transform-style: preserve-3d;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-.image-gallery span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: flex;
+    width: 900%;
     height: 100%;
-    /* Distribute images evenly around the 3D circle */
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px); /* 360deg / 8 images = 45deg per image */
+    animation: slide 20s infinite; 
 }
 
-.image-gallery span img {
-    width: 100%;
+.image-gallery img {
+    width: 10%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    /* Add some shadow and styling to images */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover; 
+}
+
+@keyframes slide {
+    0%,5% { transform: translateX(0); }
+
+    11%,16% { transform: translateX(-100%); }
+
+    22%,27% { transform: translateX(-200%); }
+
+    33%,38% { transform: translateX(-300%); }
+
+    44%,49% { transform: translateX(-400%); }
+
+    55%,60% { transform: translateX(-500%); }
+
+    66%,71% { transform: translateX(-600%); }
+
+    77%,82% { transform: translateX(-700%); }
+
+    88%,93% { transform: translateX(-800%); }
+
+    100% { transform: translateX(0); }
 }
