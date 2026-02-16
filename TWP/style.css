@@ -92,43 +92,35 @@ img {
 
 .gallery-container {
     width: 800px;
-    height: 400px; 
+    height: 400px;
     overflow: hidden;
     margin: auto;
     border: 1px solid black;
 }
 
+/* conveyor belt */
+
 .image-gallery {
     display: flex;
-    width: 900%;
     height: 100%;
-    animation: slide 20s infinite; 
+    width: max-content;    
+    animation: scroll 40s linear infinite;
 }
 
 .image-gallery img {
-    width: 10%;
+    width: 800px;           
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-@keyframes slide {
-    0%,5% { transform: translateX(0); }
 
-    11%,16% { transform: translateX(-100%); }
 
-    22%,27% { transform: translateX(-200%); }
-
-    33%,38% { transform: translateX(-300%); }
-
-    44%,49% { transform: translateX(-400%); }
-
-    55%,60% { transform: translateX(-500%); }
-
-    66%,71% { transform: translateX(-600%); }
-
-    77%,82% { transform: translateX(-700%); }
-
-    88%,93% { transform: translateX(-800%); }
-
-    100% { transform: translateX(0); }
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-7200px); 
+    }
 }
