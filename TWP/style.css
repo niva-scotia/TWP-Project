@@ -90,9 +90,45 @@ img {
     border: 1px solid #ddd;
 }
 
-/* optional tidy gallery layout */
+.gallery-container {
+    /* Define the 3D space for the gallery */
+    perspective: 1000px;
+}
 
-#sec3 + img,
-#sec3 ~ img {
-    display: inline-block;
+.image-gallery {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* Apply the rotating animation */
+    animation: rotate 20s linear infinite;
+    /* Maintain 3D transformation for children */
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.image-gallery span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Distribute images evenly around the 3D circle */
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px); /* 360deg / 8 images = 45deg per image */
+}
+
+.image-gallery span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Add some shadow and styling to images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
