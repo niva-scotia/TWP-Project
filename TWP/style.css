@@ -46,6 +46,22 @@ body {
 .pagenav a:hover {
    color: rgba(74, 190, 248, 0.853);
 }
+.section-nav {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #1b6ca8;
+    font-size: 0.95rem;
+}
+
+.section-nav a:hover {
+    color: #144d78;
+}
 
 
 h1 {
