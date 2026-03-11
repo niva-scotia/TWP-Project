@@ -150,7 +150,7 @@ img {
 
 }
 .profile img {
-    width: 300; 
+    width: 300px; 
     height: auto;
 }
 .profile{
@@ -179,7 +179,7 @@ table {
     margin: 40px auto;
     border-collapse: collapse;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
+    font-size: 20px;
     background: white;
     color: #453283;
 
